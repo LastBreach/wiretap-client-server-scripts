@@ -1,13 +1,15 @@
 # wiretapme - client & server dummy chat scripts
 These Python scripts are used to establish an ongoing dummy communication between a server and a client. This can be used for wiretap excercises. 
 
-**goal**
+### Excercise
 
-Try to sniff each directions of the communication off the wire by creating a physical wiretap, without interrupting the communication.
+Try to sniff each direction of the communication off the wire without interrupting the communication, by creating a physical wiretap.
 
 
 ## Usage
-Start the script `server.py` on your server machine and `client.py` on the client machine. Once connected, the scripts will exchange a simple hello message back and forth every second. The output will be red if the time difference between two messages is not 1 second. 
+Start the script `server.py` on your server machine and `client.py` on the client machine. Once connected, the scripts will exchange a simple hello message back and forth every second. The output will be red and "- FAIL" will be appended, if the time difference between two messages is not 1 second. 
+
+Furthermore, every logged output includes both the previous and current timestamp for direct comparison.
 
 ### Run with stdout only
 Simply start the scripts.
@@ -27,7 +29,7 @@ Simply start the scripts.
 
 
 ### Run with logging
-To show stdout and log to a file at the same time, use the following commands.
+In order to show messages on stdout and log them to a file at the same time, use the following commands.
 
 
     $ python -u server.py |tee -a server.log
@@ -41,5 +43,5 @@ To show stdout and log to a file at the same time, use the following commands.
 
 
 ### Error messages
-This is what error messages look like this:
+This is what error messages should look like, if any occur.
 ![error images](wiretapme_errors.jpg)
