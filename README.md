@@ -1,4 +1,4 @@
-# wiretap-client-server-scripts
+# wiretapme - client & server dummy chat scripts
 These Python scripts are used to establish an ongoing dummy communication between a server and a client. This can be used for wiretap excercises. 
 
 **goal**
